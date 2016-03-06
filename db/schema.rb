@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20160306071023) do
     t.string   "topic"
     t.text     "post_text"
     t.integer  "vote"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -42,8 +43,6 @@ ActiveRecord::Schema.define(version: 20160306071023) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.string   "password"
-    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

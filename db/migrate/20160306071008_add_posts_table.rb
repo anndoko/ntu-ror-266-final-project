@@ -5,6 +5,9 @@ class AddPostsTable < ActiveRecord::Migration
       t.text :post_text
       t.integer :vote
 
+      # Association
+      t.integer :user_id
+
       t.timestamps
     end
   end
