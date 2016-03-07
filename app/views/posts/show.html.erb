@@ -1,6 +1,10 @@
-<p>
-<%= @post.topic%>
-<%= @post.post_text%>
-</p>
+<div class = "row">
+  <div class = "col-md-6 well">
+    <h2><%= @post.topic%></h2>
+    <p>
+    <%= @post.post_text%>
+    </p>
+  </div>
+</div>
 
 <%= link_to "Back to Main Page", posts_path%>
