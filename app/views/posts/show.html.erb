@@ -1,6 +1,8 @@
+<%= render "shared/title", title: "You are reading #{@post.topic}" %>
+
 <div class = "row">
   <div class = "col-md-6 well">
-    <h2><%= @post.topic%></h2>
+    <h3><%= @post.topic%></h3>
     <p>
     <%= @post.post_text%>
     </p>
