@@ -1,12 +1,42 @@
 <%= render "shared/title", title: "You are reading #{@post.topic}" %>
 
+<!-- Show a post-->
 <div class = "row">
   <div class = "col-md-6 well">
-    <h3><%= @post.topic%></h3>
     <p>
     <%= @post.post_text%>
     </p>
   </div>
 </div>
 
-<%= link_to "Back", posts_path%>
+<!-- Show comments of a post-->
+<h3>Comments:</h3>
+
+<% @post.comments.each do |comment| %>
+  <div class = "row">
+    <div class = "col-md-6 well">
+      <p>
+      	<%= comment.comment_text %>
+      </p>
+    </div>
+  </div>
+<% end %>
+
+<!-- Create a new comment -->
+<h3>Leave your comments here!</h3>
+
+<%= form_for [@post, @comment] do |f| %>
+  <div class = "row">
+    <%= f.text_area :comment_text, rows: 3, class: "col-md-6" %>
+    <div class = "col-md-6">
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
+
+<!-- Link to the main page -->
+<hr>
+
+<div class = "row">
+  <%= link_to "Back", posts_path%>
+</div>

@@ -6,6 +6,8 @@ class PostsController < ApplicationController
   # Show the content of a post
   def show
     @post = Post.find(params[:id])
+    @comment = Comment.new
+    @comments = @post.comments
   end
   #--------------------------------------------------#
   # Create a post
