@@ -19,8 +19,12 @@
       </div>
 
 <!-- Submit button -->
-      <%= f.submit(@post.new_record? ? "Create Post" : "Update Post", class: "btn btn-primary") %>
+      <%= f.submit(@post.new_record? ? "Submit" : "Update Post", class: "btn btn-primary") %>
     <% end %>
   </div>
 </div>
+
+<!-- Link to the main page -->
+<hr>
+
 <%= link_to "Back", posts_path%>
