@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   root 'posts#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  
+  get '/register', to: 'users#new'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
@@ -16,6 +18,8 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
+
+  resources :users, only: [:new, :create, :edit, :update, :show]
   # Example resource route with options:
   #   resources :products do
   #     member do
