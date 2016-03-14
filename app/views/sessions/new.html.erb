@@ -1,0 +1,32 @@
+<%= render "shared/title", title: "Login" %>
+
+<div class = "row">
+  <div class = "col-md-6 well">
+<!-- Login -->
+    <%= form_tag '/login' do |f| %>
+
+<!-- Enter user's name -->
+      <div class = "form-group">
+      <%= label_tag :name %>
+      <br>
+      <%= text_field_tag :name, params[:name] %>
+      </div>
+
+<!-- Enter user's password -->
+      <div class = "form-group">
+      <%= label_tag :password %>
+      <br>
+      <%= password_field_tag :password, params[:password] %>
+      </div>
+
+<!-- Login button -->
+      <br>
+      <%= submit_tag "Login", class: "btn btn-info" %>
+    <% end %>
+  </div>
+</div>
+
+<!-- Link to the main page -->
+<hr>
+
+<%= link_to "Not Now", posts_path%>
