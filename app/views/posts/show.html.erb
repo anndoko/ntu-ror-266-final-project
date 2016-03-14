@@ -22,16 +22,20 @@
   </div>
 <% end %>
 
+<!-- User only -->
+<% if logged_in? %>
 <!-- Create a new comment -->
-<h3>Leave your comments here!</h3>
+  <h3>Leave your comments here!</h3>
 
-<%= form_for [@post, @comment] do |f| %>
-  <div class = "row">
-    <%= f.text_area :comment_text, rows: 3, class: "col-md-6" %>
-    <div class = "col-md-6">
-      <%= f.submit "Submit", class: "btn btn-primary" %>
+  <%= form_for [@post, @comment] do |f| %>
+    <div class = "row">
+      <%= f.text_area :comment_text, rows: 3, class: "col-md-6" %>
+      <div class = "col-md-6">
+        <%= f.submit "Submit", class: "btn btn-primary" %>
+      </div>
     </div>
-  </div>
+  <% end %>
+
 <% end %>
 
 <!-- Link to the main page -->
