@@ -9,8 +9,6 @@
 <!-- User action: create new posts -->
         <% if logged_in? %>
           <li><%= link_to "Post Here!", new_post_path %></li>
-        <% else %>
-          <li><%= link_to "Register", register_path %></li>
         <% end %>
       </ul>
 <!-- Dropdown -->
