@@ -1,0 +1,37 @@
+<%= render 'shared/title', title: "#{@user.name}" %>
+
+<!-- Show the user's posts -->
+<br>
+<h3>Posts</h3>
+
+<% @user.posts.each do |post|%>
+  <div class = "row">
+    <div class = "col-md-6 well">
+      <h3><%= post.topic %></h3>
+      <p>
+        <%= post.post_text%>
+      </p>
+    </div>
+  </div>
+<% end %>
+
+<!-- Show the user's comments -->
+<br>
+<h3>Comments</h3>
+
+<% @user.comments.each do |comment|%>
+  <div class = "row">
+    <div class = "col-md-6 well">
+      <p>
+        <%= comment.comment_text %>
+      </p>
+    </div>
+  </div>
+<% end %>
+
+<!-- Link to the main page -->
+<hr>
+
+<div class = "row">
+  <%= link_to "Back", posts_path%>
+</div>
