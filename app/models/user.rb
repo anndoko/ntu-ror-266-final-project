@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
 
   # Validation
   validates :name, presence: true
+  validates :name, uniqueness: true
+  # Run the validation only when a new record is created
+  validates :password, presence: true, on: :create
+  validates :password, length: {minimum: 5}
 end
