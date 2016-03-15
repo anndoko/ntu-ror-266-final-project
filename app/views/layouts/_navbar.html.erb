@@ -11,7 +11,7 @@
 <!-- User action: create new posts / logout -->
         <% if logged_in? %>
           <li><%= link_to "Post Here!", new_post_path %></li>
-          <li><%= link_to "Log Out", new_post_path %></li>
+          <li><%= link_to "Log Out", root_path %></li>
 <!-- Visitor actions: register / login -->
         <% else %>
           <li><%= link_to "Register", register_path %></li>
