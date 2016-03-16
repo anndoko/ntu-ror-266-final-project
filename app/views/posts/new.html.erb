@@ -6,16 +6,16 @@
     <%= form_for Post.new do |f| %>
 <!-- Topic -->
       <div class = "form-group">
-      <%= f.label :topic %>
-      <br>
-      <%= f.text_field :topic %>
+        <%= f.label :topic %>
+        <br>
+        <%= f.text_field :topic %>
       </div>
 
 <!-- Post_text -->
       <div class = "form-group">
-      <%= f.label :post_text %>
-      <br>
-      <%= f.text_area :post_text, size: "50x10" %>
+        <%= f.label :post_text %>
+        <br>
+        <%= f.text_area :post_text, size: "50x10" %>
       </div>
 
 <!-- Submit button -->
