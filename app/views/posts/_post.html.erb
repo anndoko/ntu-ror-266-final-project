@@ -1,0 +1,16 @@
+<!-- HTML TAGS:
+<div> defines a division or a section;
+<p> defines a paragraph;
+<span> is used to color a part of text. 
+-->
+
+<div class = "row">
+  <div class = "col-md-6 well">
+    <p>
+    <h3><%= post.topic %></h3>
+    </p>
+    <span>
+    <%= link_to "See More", post_path(post)%>
+    </span>
+  </div>
+</div>
