@@ -1,27 +1,30 @@
-<% if tag.tag_title == "Disussion" %>
+<% if tag.tag_title == "Poll" %>
   <span class = "badge alert-danger">
 
 <% elsif tag.tag_title == "Discussion" %>
-  <span class = "badge alert-danger">
-
-<% elsif tag.tag_title == "Ruby on Rails" %>
   <span class = "badge alert-success">
 
-<% elsif tag.tag_title == "Java" %>
+<% elsif tag.tag_title == "Chat" %>
   <span class = "badge progress-bar-info">
 
-<% elsif tag.tag_title == "LVGD" %>
+<% elsif tag.tag_title == "Gossip" %>
   <span class = "badge progress-bar-warning">
 
-<% elsif tag.tag_title == "Hate" %>
+<% elsif tag.tag_title == "Question" %>
   <span class = "badge progress-bar-primary">
 
-<% elsif tag.tag_title == "Git" %>
-  <span class = "badge alert-danger">
-
-<% elsif tag.tag_title == "Question" %>
+<% elsif tag.tag_title == "Hate!" %>
   <span class = "badge alert-danger">
 
 <% end %>
   <%= tag.tag_title %>
 </span>
+
+<!--
+Tag.create(tag_title: "Poll")
+Tag.create(tag_title: "Discussion")
+Tag.create(tag_title: "Chat")
+Tag.create(tag_title: "Gossip")
+Tag.create(tag_title: "Question")
+Tag.create(tag_title: "Hate!")
+-->
