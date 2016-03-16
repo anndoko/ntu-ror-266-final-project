@@ -3,6 +3,11 @@
 
 <div class = "row">
   <div class = "col-md-6 well">
+<!-- Show tags-->
+      <%= render partial: "tags/tag", collection: @post.tags %>
+    <p>
+      <h4><%= @post.topic%></h4>
+    </p>
     <p>
       <%= @post.post_text%>
     </p>

@@ -6,6 +6,9 @@
 
 <div class = "row">
   <div class = "col-md-6 well">
+  <!-- Show tags-->
+  <%= render partial: "tags/tag", collection: post.tags %>
+  <!-- Show posts-->   
     <p>
     <h3><%= post.topic %></h3>
     </p>
