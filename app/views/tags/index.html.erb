@@ -1,0 +1,9 @@
+<%= render "shared/title", title: "Tags" %>
+
+<% @tags.each do |tag| %>
+<div class = "row">
+  <div class = "col-md-6 well">
+      <p><b><%= tag.tag_title %></p>
+  </div>
+</div>
+<% end %>

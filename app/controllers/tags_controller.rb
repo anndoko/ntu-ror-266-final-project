@@ -1,5 +1,11 @@
 class TagsController < ApplicationController
 
+  # Show the entire list
+  def index
+    @tags = Tag.all
+  end
+
+  # Create a tag
   def new
     @tag = Tag.new
   end
