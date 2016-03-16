@@ -1,0 +1,23 @@
+<%= render "shared/title", title: "Create New Tags" %>
+
+<div class = "row">
+  <div class = "col-md-6 well">
+<!-- Use form helper -->
+    <%= form_for @tag do |t| %>
+<!-- Topic -->
+      <div class = "form-group">
+        <%= t.label :tag_title %>
+        <br>
+        <%= t.text_field :tag_title %>
+      </div>
+
+<!-- Submit button -->
+      <%= t.submit "Create", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+<!-- Link to the main page -->
+<hr>
+
+<%= link_to "Back", posts_path%>
