@@ -18,7 +18,17 @@
         <%= f.text_area :post_text, size: "50x10" %>
       </div>
 
+<!-- Tags -->
+      <div class="form-group">
+      <%= f.label :tags %>
+      <br>
+      <%= collection_check_boxes(:post, :tag_ids, Tag.all, :id, :tag_title) do |cbox|%>
+      <%= cbox.label(class: "checkbox-inline") { cbox.check_box(class: "checkbox") + cbox.text } %>
+      <% end %>
+    </div>
+
 <!-- Submit button -->
+      <br>
       <%= f.submit(@post.new_record? ? "Submit" : "Update Post", class: "btn btn-primary") %>
     <% end %>
   </div>

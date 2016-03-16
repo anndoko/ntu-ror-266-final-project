@@ -4,13 +4,15 @@
 <div class = "row">
   <div class = "col-md-6 well">
 <!-- Show tags-->
-      <%= render partial: "tags/tag", collection: @post.tags %>
+    <%= render partial: "tags/tag", collection: @post.tags %>
     <p>
-      <h4><%= @post.topic%></h4>
+      <h3><%= @post.topic%></h3>
     </p>
+    <br>
     <p>
       <%= @post.post_text%>
     </p>
+    <br>
       <small> Posted by </small><%= "#{@post.user.name}" %>
   </div>
 </div>
@@ -24,6 +26,7 @@
       <p>
       	<%= comment.comment_text %>
       </p>
+      <br>
         <small> Commented by </small><%= "#{comment.user.name}" %>
     </div>
   </div>

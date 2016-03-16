@@ -7,6 +7,8 @@
 <% @user.posts.each do |post|%>
   <div class = "row">
     <div class = "col-md-6 well">
+      <%= render partial: "tags/tag", collection: post.tags %>
+      <p>
       <h3><%= post.topic %></h3>
       <p>
         <%= post.post_text%>
